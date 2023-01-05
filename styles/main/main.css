@@ -1,11 +1,10 @@
-
 /* Configure your forum styles! */
 body,
 button,
 input {
     /* Specify fonts for your forums
 	here. */
-    font-family: -apple-system, Tahoma, Verdana, sans-serif;
+    font-family: Times New Roman,-apple-system, Tahoma, Verdana, sans-serif;
     /* Default font size. Editor can 
 	override this. */
     font-size: 17px;
@@ -23,12 +22,9 @@ body {
 body, html {
 	margin:0;
 	padding:3px;
- color:white;
-background: rgb(148,187,233);
-background: -moz-linear-gradient(0deg, rgba(148,187,233,1) 0%, rgba(255,97,167,1) 96%);
-background: -webkit-linear-gradient(0deg, rgba(148,187,233,1) 0%, rgb(255, 97, 167) 96%);
-background: linear-gradient(0deg, rgba(148,187,233,1) 0%, rgba(255,97,167,1) 96%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#94bbe9",endColorstr="#ff61a7",GradientType=1);
+color:#ffd4a3;
+background: #203c56;
+background-image: linear-gradient(to bottom, #0d2b45, #112e48, #14314b, #18354f, #1b3852, #283d58, #34415e, #3f4663, #554e6b, #695671, #7c5f76, #8d697a);
 }
 /* Configure hyperlinks. */
 a {

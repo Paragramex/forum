@@ -4,6 +4,7 @@ register_shutdown_function(function() {
 	require_once __DIR__ . '/footer.php';
 });
 ?> 
+
 <div id="keyboard-focus" style="z-index:999;">
 	<a id="link" href="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>#mainContent" style="background-color:black;">Skip to main content</a>
 </div>

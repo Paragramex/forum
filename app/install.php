@@ -19,9 +19,9 @@
 	<p>If you think you already installed the software and you see this screen after reloading, there's something wrong with the installation. Please open an issue on GitHub: Paragramex/forum.</p>
 	<form action="app/welcome.php" method="post">
 	<label for="title">Type the title:</label>
-	<input type="text" id="title" name="title" required="required" value="Forums &lt;small&gt;Beta&lt;/small&gt;" size="35"/>
+	<input type="text" id="title" name="title" required="required" value="My Forum &lt;small&gt;v1.0&lt;/small&gt;" size="35"/>
 	<br />
-	HTML will <strong>not</strong> be escaped! This allows rich text formatting.
+	HTML will <strong>not</strong> be escaped! This allows rich text formatting. Please be aware that this is used in the forum title on the top of the tab.
 	<hr />
 	<label>These are the tags. Type them, separated by spaces.
 	<br />
