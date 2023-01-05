@@ -9,7 +9,7 @@ account! Files with dangerous extensions such as
  - .sh 
  - .bat
  - .cmd
- - .js 
- - .html 
+ - .rar 
+ - .exe
 and others which can run on your computer can damage
 it.

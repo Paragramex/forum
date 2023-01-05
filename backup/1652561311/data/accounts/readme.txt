@@ -1,1 +1,0 @@
-Do not manually edit the contents of this directory. This is auto-generated.
