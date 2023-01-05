@@ -35,4 +35,4 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see &lt;<a href="https://gnu.org/licenses/">https://www.gnu.org/licenses/</a>>.
 </pre>
-<p>You can download the source code <a href="https://github.com/weeklyd3/nodb-forum/archive/refs/heads/master.zip" download="">here</a>.</p>
+<p>You can download the source code <a href="https://github.com/Paragramex/forum/archive/refs/heads/master.zip" download="">here</a>.</p>

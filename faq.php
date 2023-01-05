@@ -39,7 +39,7 @@
   </div>
   <div id="price" class="answer">
 	<h2>How much does it cost?</h2>
-	It's free by default in the <a href="https://github.com/weeklyd3/nodb-forum/blob/master/account/signup.php">software package</a>, but because we have the <a href="https://github.com/weeklyd3/nodb-forum">source code</a> freely available, some forum owners looking to make money might enforce payments. If you upload the software without changing it, it's free to use.
+	It's free by default in the <a href="https://github.com/Paragramex/forum/blob/master/account/signup.php">software package</a>, but because we have the <a href="https://github.com/Paragramex/forum">source code</a> freely available, some forum owners looking to make money might enforce payments. If you upload the software without changing it, it's free to use.
   </div>
   <div id="bad_user" class="answer">
 	<h2>I registered but it says "Bad username"! Now what?</h2>
@@ -49,7 +49,7 @@
   </div>
   <div id="rules" class="answer">
   <h2>Are there any board rules?</h2>
-  There's the <a href="tos.php">TOS</a>. Note that administrators can edit the TOS at any time, and they should notify the users of a TOS change by creating a topic. (There's a <a href="https://github.com/weeklyd3/nodb-forum/blob/master/tos_raw.php">default TOS</a>, but administrators can edit it to match their rules. Be sure to review it from time to time!)
+  There's the <a href="tos.php">TOS</a>. Note that administrators can edit the TOS at any time, and they should notify the users of a TOS change by creating a topic. (There's a <a href="https://github.com/Paragramex/forum/blob/master/tos_raw.php">default TOS</a>, but administrators can edit it to match their rules. Be sure to review it from time to time!)
   </div>
   <div id="tags" class="answer">
 	<h2>What are tags?</h2>

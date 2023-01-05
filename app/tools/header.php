@@ -38,7 +38,7 @@
 	<div style="margin:2px;"><a href="app/tools/ipban.php">IP bans</a></div>
 	<div style="margin:2px;"><a href="app/tools/flags.php">Flags</a></div>
 	<?php 
-		if (file_exists(__DIR__ . '/../../extensions/nodb-forum-ban-appeal/index.php')) {
+		if (file_exists(__DIR__ . '/../../extensions/forum-ban-appeal/index.php')) {
 			echo '<div style="margin:2px;"><a href="app/tools/appeals.php">Appeals</a></div>';
 		}
 	?>

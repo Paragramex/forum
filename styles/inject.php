@@ -4,7 +4,7 @@ date_default_timezone_set('UTC');
 set_error_handler(function($errno, $errstr, $errfile, $errline) {
 	if (isset($GLOBALS['noerror'])) return;
 	logmsg("error", "Error number " . $errno . " with string " . json_encode($errstr) . " in file " . $errfile . " on line " . $errline, getname());
-	?><div><strong>[Debug info] Error:</strong><table class="table"><tr><th>Name</th><th>Value</th><tr><td>Error number</td><td><?php echo $errno; ?></td></tr><tr><td>Error string</td><td><?php echo htmlspecialchars($errstr); ?></td></tr><tr><td>File</td><td><?php echo $errfile; ?></td></tr><tr><td>Line</td><td><?php echo $errline; ?></td></table><a href="https://github.com/weeklyd3/nodb-forum/issues/new/choose">Report this error</a></div><?php
+	?><div><strong>[Debug info] Error:</strong><table class="table"><tr><th>Name</th><th>Value</th><tr><td>Error number</td><td><?php echo $errno; ?></td></tr><tr><td>Error string</td><td><?php echo htmlspecialchars($errstr); ?></td></tr><tr><td>File</td><td><?php echo $errfile; ?></td></tr><tr><td>Line</td><td><?php echo $errline; ?></td></table><a href="https://github.com/Paragramex/forum/issues/new/choose">Report this error</a></div><?php
 	return true;
 }, E_ALL & ~E_NOTICE);
 ?><!-- Why not take this for some ice 
@@ -34,8 +34,8 @@ if (file_exists(__DIR__ . '/../config.json')) {
 <script>
 console.log('%cIf you are pasting code here others could be trying to make you do Self XSS. ', 'color:red;font-size:2em;');
 console.log("%cWhat could attackers do when you paste their code? A lot of evil things. Such as:\n - Logging a user out\n - Creating random topics without user interaction\n - or even send messages without user consent!\nSo don't paste any code unless you absolutely know what you're doing!", 'color:#d3b312;font-size:1.2em;')
-console.log("%cIf you're debugging you're fine", 'color:blue;font-size:1.5em;');
-console.log("%cIf you're wondering how to make a bot, we have a page on that: https://github.com/weeklyd3/nodb-forum/wiki/Making-Chatbots-with-the-API", "color:green;font-size:1.25em;");
+console.log("%cIf you're debugging you're fine", 'color:peachwhite;font-size:1.5em;');
+console.log("%cIf you're wondering how to make a bot, we have a page on that: https://github.com/weeklyd3/nodb-forum/wiki/Making-Chatbots-with-the-API", "color:peach;font-size:1.25em;");
 window.addEventListener('DOMContentLoaded', function() {
 	hljs.highlightAll();
 });

@@ -20,8 +20,8 @@
 	<blockquote><?php echo file_get_contents('./data/accounts/'.cleanFilename(getname()) . '/ban.txt'); ?></blockquote>
 	  The administrator can lift the ban.
 	  <section><?php 
-	  if (file_exists('./extensions/nodb-forum-ban-appeal/index.php')) {
-		  include_once('./extensions/nodb-forum-ban-appeal/index.php');
+	  if (file_exists('./extensions/forum-ban-appeal/index.php')) {
+		  include_once('./extensions/forum-ban-appeal/index.php');
 	  }
 	  ?></section>
   </body>

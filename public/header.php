@@ -96,7 +96,7 @@ require(__DIR__ . '/../libraries/parsedown.php');
 <li><a href="./account/signup.php">Sign up for account</a></li>
 <br>
 <li><a href="./files/directory.php">File Explorer</a></li>
-<li><a href="https://github.com/weeklyd3/nodb-forum">GitHub repository</a></li>
+<li><a href="https://github.com/Paragramex3/forum">GitHub repository</a></li>
 <li><a href="app/tools/">Moderation Tools</a></li>
 </ul>
 <center style="word-break:break-all;"><em><?php

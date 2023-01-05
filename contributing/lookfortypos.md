@@ -9,4 +9,4 @@ There are two ways to do this:
 [What to do if you find an issue or want to suggest a feature](createissue.md)
 
 [Set up a testing server](testingserver.md)  
-[Browse code](https://github.com/weeklyd3/nodb-forum)
+[Browse code](https://github.com/Paragramex/forum/)
