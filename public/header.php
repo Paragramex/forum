@@ -14,7 +14,7 @@ register_shutdown_function(function() {
 	</div>
   </div>
 <header>
-<table id="header" style="width:100%; max-width:100%;background-color:#7AD7FF;color:black;z-index:10;">
+<table id="header" style="width:100%; max-width:100%;background-color:#211e20;color:#a0a08b;z-index:10; border-radius: 10px; margin-bottom:1%;">
 <tr><td><h1 style="display:inline;"><span id="menubutton" style="cursor:pointer;" tabindex="0"><img src="img/menu.png" alt="" /></span> <a style="text-decoration:none !important;" href="./"><img alt="Forum Logo" src="./img/logo.png" /><span id="TitleText">
 <?php
 include_once(__DIR__ . '/../libraries/lib.php');
@@ -24,8 +24,8 @@ if (!file_exists(__DIR__ ."/../config.json")) {
 $object = json_decode(file_get_contents(__DIR__ ."/../config.json"));
 echo $object->forumtitle."</span></a></h1></td>";
 if (!getname()) {
-	echo '<td><a href="account/signup.php">sign up</a></td>';
-	echo '<td><a href="account/login.php">log in</a></td>';
+	echo '<td><a style="padding:10px; background-clip: padding-box; background-color: #4a7a96; color: #ee8695; border-radius: 10px; text-decoration:none;" href="account/signup.php">sign up</a></td>';
+	echo '<td><a style="padding:10px; background-clip: padding-box; background-color: #4a7a96; color: #ee8695; border-radius: 10px; text-decoration:none;" href="account/login.php">log in</a></td>';
 } else {
 	$unread = '>';
 	function determineIfUnread() {
@@ -37,9 +37,9 @@ if (!getname()) {
 		}
 		return false;
 	}
-	if (determineIfUnread()) $unread = ' style="background-color:#ff0000;font-weight:bold;" title="New notifications.">See new ';
-	echo '<td><a href="inbox.php" id="notification-button"' . $unread . 'notifications</a></td><td><a href="account/">'.htmlspecialchars(getname()).'</a></td>';
-	echo '<td>(<a href="account/logout.php">log out</a>)</td></tr>';
+	if (determineIfUnread()) $unread = ' style="border-style: solid;padding:10px; background-clip: padding-box; background-color: #4a7a96; color: #ee8695; border-radius: 10px; text-decoration:none;border-color: #997577;" title="New  notifications.">See new';
+	echo '<td><a style="padding:10px; background-clip: padding-box; background-color: #4a7a96; color: #ee8695; border-radius: 10px; text-decoration:none;" href="inbox.php" id="notification-button"' . $unread . 'notifications</a></td><td><a style="padding:10px; background-clip: padding-box; background-color: #4a7a96; color: #ee8695; border-radius: 10px; text-decoration:none;" href="account/">'.htmlspecialchars(getname()).'</a></td>';
+	echo '<td><a style="padding:10px; background-clip: padding-box; background-color: #4a7a96; color: #ee8695; border-radius: 10px; text-decoration:none;" href="account/logout.php">log out</a></td></tr>';
 }
 ?>
 <script>
@@ -86,7 +86,7 @@ require(__DIR__ . '/../libraries/parsedown.php');
 	}
 ?></div>
 <div id="menu" style="resize:both; max-width:100%; min-width:120px; width:400px; z-index:10; height:100%; background-color:#e2ccf5; display:none; position:fixed; top:0; left:0; overflow-y:scroll;color:black;">
-<p id="drag" style="text-align:right;cursor:move;"><span style="text-align:left;">Menu</span> <span onclick="document.getElementById('menu').style.display='none';" style="cursor:pointer;">&times;</span></p>
+<p id="drag" style="text-align:right;cursor:move; margin-left: 2%;"><span style="text-align:left;">Close</span> <span onclick="document.getElementById('menu').style.display='none';" style="cursor:pointer;">&times;</span></p>
 <ul style="list-style:none; padding:7px;">
 <li><a href="./">Home</a></li>
 <li><a href="./viewtopic.php">Chat room</a></li>
@@ -94,19 +94,18 @@ require(__DIR__ . '/../libraries/parsedown.php');
 <br>
 <li><a href="./account/">My Account</a></li>
 <li><a href="./account/login.php">Log in to different account</a></li>
-<li><a href="./account/signup.php">Sign up for account</a></li>
+<li><a href="./account/signup.php">Sign up for an account</a></li>
 <br>
 <li><a href="./files/directory.php">File Explorer</a></li>
 <li><a href="https://github.com/Paragramex3/forum">GitHub repository</a></li>
-<li><a href="app/tools/">Moderation Tools</a></li>
+<li><a href="app/tools/">Admin Panel</a></li>
 </ul>
 <center style="word-break:break-all;"><em><?php
 $link = 'Location: ';
 $link .= $_SERVER['HTTP_HOST'];
 $link .= $_SERVER['REQUEST_URI'];
 echo $link;
-?><br><br>
-<strong><a href="javascript:;" onclick="document.getElementById('menu').setAttribute('style', 'resize:both; max-width:100%; min-width:120px; width:400px; z-index:10; height:100%; background-color:#e2ccf5; display:block; position:fixed; top:0; left:0; overflow-y:scroll;color:black;');">Reset menu position</a></strong></em></center>
+?><br><br></em></center>
 </div>
 </nav>
 <script>
