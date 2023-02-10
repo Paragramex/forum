@@ -18,7 +18,7 @@
 			exit(0);
 		}
 	} else {
-		echo 'This feature is not available to anonymous users.';
+		echo 'This feature is not available to the public, please login to use console.';
 		exit(0);
 	}
 	?>

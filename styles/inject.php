@@ -13,6 +13,7 @@ cream⸮ It's only a prick!
 Why not⸮ People are harmed more than
 helped by this! -->
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link rel="icon" type="image/x-icon" href="<?php echo __DIR__ . '/../img/logo.png'?>" />
 <?php
 ini_set('display_errors', 0);
 require_once __DIR__ . '/../libraries/lib.php';
