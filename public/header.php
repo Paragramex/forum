@@ -3,8 +3,9 @@
 register_shutdown_function(function() {
 	require_once __DIR__ . '/footer.php';
 });
-?> 
 
+?>
+<link rel="icon" type="image/x-icon" href="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . '/img/logo.png'; ?>">
 <div id="keyboard-focus" style="z-index:999;">
 	<a id="link" href="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>#mainContent" style="background-color:black;">Skip to main content</a>
 </div>
@@ -13,8 +14,9 @@ register_shutdown_function(function() {
 		<table height="100%"><tr><td><p id="loading" style="color:black;">loading...</p><iframe src="about:blank" onload="document.getElementById('loading').style.display = 'none';" id="notification-iframe" frameBorder="0" style="height:600px;max-height:75vh;"></iframe></td></tr><tr><td><button onclick="this.parentNode.parentNode.parentNode.parentNode.parentNode.style.display = 'none';document.getElementById('loading').style.display = 'block';document.getElementById('notification-iframe').src = '';">Close</button></td></tr></table>
 	</div>
   </div>
-<header>
-<table id="header" style="width:100%; max-width:100%;background-color:#211e20;color:#a0a08b;z-index:10; border-radius: 10px; margin-bottom:1%;">
+<header> 
+<table id="header" style="width:100%; max-width:100%;background-image: linear-gradient(to right top, #002837, #003746, #004654, #005660, #00676b, #006d73, #00727c, #007885, #1b728b, #336c8c, #476588, #575e81);;color:#a0a08b;z-index:10; border-radius: 10px; margin-bottom:1%;-webkit-box-shadow: 5px 5px 5px 5px #888888; 
+box-shadow: 5px 5px 5px 5px #888888;">
 <tr><td><h1 style="display:inline;"><span id="menubutton" style="cursor:pointer;" tabindex="0"><img src="img/menu.png" alt="" /></span> <a style="text-decoration:none !important;" href="./"><img alt="Forum Logo" src="./img/logo.png" /><span id="TitleText">
 <?php
 include_once(__DIR__ . '/../libraries/lib.php');
