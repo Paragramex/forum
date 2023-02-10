@@ -1,6 +1,4 @@
-<?php
-
-?><html lang="en">
+<html lang="en">
   <head>
 	<base href="../../" />
     <title>Forums &mdash; Tools</title>
@@ -18,12 +16,13 @@
 			exit(0);
 		}
 	} else {
-		echo 'This feature is not available to the public, please login to use console.';
+		echo 'This feature is not available to the public, please login to use admin console.';
 		exit(0);
 	}
 	?>
   </head>
   <body>
+		<div class='adminpagehead'>
 	<h1>Moderation Tools</h1>
 	<small><small><em>Only admins may view this page.</em></small></small>
 	<nav style="display:flex; flex-wrap:nowrap;overflow-x:scroll;justify-content:center;">
@@ -42,5 +41,19 @@
 			echo '<div style="margin:2px;"><a href="app/tools/appeals.php">Appeals</a></div>';
 		}
 	?>
+
 	<div style="margin:2px;"><a href="."><strong>Log Out</strong></a></div>
 	</nav>
+		</div>
+	<style>
+.adminpagehead {
+width:100%; 
+max-width:100%;
+color:#a0a08b;
+z-index:10; 
+border-radius: 10px; 
+margin-bottom:1%;
+-webkit-box-shadow: 5px 5px 5px 5px #888888 ; 
+box-shadow: 5px 5px 5px 5px #888888;
+}
+	</style>

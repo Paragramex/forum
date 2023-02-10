@@ -15,7 +15,7 @@ register_shutdown_function(function() {
 	</div>
   </div>
 <header> 
-<table id="header" style="width:100%; max-width:100%;background-image: linear-gradient(to right top, #002837, #003746, #004654, #005660, #00676b, #006d73, #00727c, #007885, #1b728b, #336c8c, #476588, #575e81);;color:#a0a08b;z-index:10; border-radius: 10px; margin-bottom:1%;-webkit-box-shadow: 5px 5px 5px 5px #888888; 
+<table id="header" style="width:100%; max-width:100%;background-image: linear-gradient(to right top, #002837, #003746, #004654, #005660, #00676b, #006d73, #00727c, #007885, #1b728b, #336c8c, #476588, #575e81);;color:#a0a08b;z-index:10; border-radius: 10px; margin-bottom:1%;-webkit-box-shadow: 5px 5px 5px 5px #888888 ; 
 box-shadow: 5px 5px 5px 5px #888888;">
 <tr><td><h1 style="display:inline;"><span id="menubutton" style="cursor:pointer;" tabindex="0"><img src="img/menu.png" alt="" /></span> <a style="text-decoration:none !important;" href="./"><img alt="Forum Logo" src="./img/logo.png" /><span id="TitleText">
 <?php

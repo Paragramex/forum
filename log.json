@@ -1,1 +1,1 @@
-[]
+[{"subject":"error","details":"Error number 2 with string \"file_get_contents(.\\\/readme.txt\\\/config.json): failed to open stream: No such file or directory\" in file \/home\/runner\/gba\/app\/tools\/flags.php on line 13","user":"admin","time":1676044321}]

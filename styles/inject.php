@@ -4,7 +4,12 @@ date_default_timezone_set('UTC');
 set_error_handler(function($errno, $errstr, $errfile, $errline) {
 	if (isset($GLOBALS['noerror'])) return;
 	logmsg("error", "Error number " . $errno . " with string " . json_encode($errstr) . " in file " . $errfile . " on line " . $errline, getname());
-	?><div><strong>[Debug info] Error:</strong><table class="table"><tr><th>Name</th><th>Value</th><tr><td>Error number</td><td><?php echo $errno; ?></td></tr><tr><td>Error string</td><td><?php echo htmlspecialchars($errstr); ?></td></tr><tr><td>File</td><td><?php echo $errfile; ?></td></tr><tr><td>Line</td><td><?php echo $errline; ?></td></table><a href="https://github.com/Paragramex/forum/issues/new/choose">Report this error</a></div><?php
+	?>
+<details>
+	<summary style="color:red;"><i>AN ERROR HAS OCCURRED (Click to view)</i></summary>
+<div><strong>[Debug info] Error:</strong><table class="table"><tr><th>Name</th><th>Value</th><tr><td>Error number</td><td><?php echo $errno; ?></td></tr><tr><td>Error string</td><td><?php echo htmlspecialchars($errstr); ?></td></tr><tr><td>File</td><td><?php echo $errfile; ?></td></tr><tr><td>Line</td><td><?php echo $errline; ?></td></table><a href="https://github.com/Paragramex/forum/issues/new/choose">Report this error</a></div>
+	</details>	
+	<?php
 	return true;
 }, E_ALL & ~E_NOTICE);
 ?><!-- Why not take this for some ice 

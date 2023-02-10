@@ -8,4 +8,3 @@
 <p> - <strong>If you violate the Terms of Use, you will face:<ul><li>a possible account ban</li><li>account deletion</li><li>post deletion</li></ul>. Thank you for trying to make this forum a better place by abiding to this document when you sign up.</strong></p>
 <p> - This <em>Terms of Use</em> document governs use of the forums. This is the entire Terms of Use, and no other user can enforce more Terms of Use, neither another copy or a revision. If you agree, you may show your acceptance. <strong>If you do not agree to the Terms, do not use the services.</strong></p>
 <p> - Your username cannot be offensive. It also cannot hint that you are affiliated with any of the administrators, nor can it hint that you are an Administrator. Choose wisely!</p>
-Changed version, edited
