@@ -1,247 +1,31 @@
 <script>
-    let xhr = new XMLHttpRequest();
-    
-    xhr.open('GET', '../docs/assets/header.html', true);
-    
-    xhr.send();
-    
-    // 4. This will be called after the response is received
-    xhr.onload = function() {
-      if (xhr.status == 200) {
-        document.getElementById('navigation').innerHTML = xhr.responseText;
-      }
-    };
-	  let xhr2 = new XMLHttpRequest();
-    
-    xhr2.open('GET', '../docs/assets/footer.html', true);
-    
-    xhr2.send();
-    
-    // 4. This will be called after the response is received
-    xhr2.onload = function() {
-      if (xhr2.status == 200) {
-        document.getElementById('bottombar').innerHTML = xhr2.responseText;
-      }
-    };
-    </script>
-    <div id="navigation"></div>
-    <h1>Forum Docs</h1>
-    <ul id="contents">
-        <li>&raquo; <a href="#intro">Introduction</a>
-            <ul>
-                <li>&raquo; <a href="#intro-install">Installation</a></li>
-                <li>&raquo; <a href="#intro-usage">Usage</a></li>
-            </ul>
-        </li>
-    </ul>
-    <label style="position: sticky;top:0;background-color: white;">Jump to:
-    <select onchange="window.location.href = '#'+this.value;">
-        <option style="display: none;" selected="selected" disabled="disabled">Jump to...</option>
-        <option value="">&lt;top></option>
-        <option value="contents">&lt;TOC></option>
-        <option value="intro">Introduction</option>
-        <option value="intro-install">Installation</option>
-        <option value="intro-usage">Usage</option>
-    </select>
-    </label>
-    <main>
-        <section id="intro">
-            <h2>Introduction</h2>
-            This is a forum software that does not need databases to read or write from. It writes files on the server instead of writing to tables or databases. There are a few advantages of this:
-            <ul>
-                <li>You don't need database software.</li>
-                <li>You don't need to keep asking your web hosting company for the username and password.</li>
-                <li>One system can cleanly keep track of the data.</li>
-                <li>The data is easier to browse.</li>
-            </ul>
-            <h3 id="intro-install">Installation</h3>
-            <ol>
-                <li>Go to the <a href="https://github.com/aragramex/nodb-forum/releases">download page</a>, and download the zip source code.
-                </li>
-                <li><details><summary>Decompress it.</summary>
-                    <div class="infobox">
-											
-                        Any tool works to decompress it, as long as it can extract all the files without telling you to pay or anything else that blocks you. I personally recommend a PHP reverse shell (generally used for malicious activitys), you can find one on github or you can just DM me on discord: Paragram#0121.
-                    </div>
-               </details></li>
-                <li><details><summary>If required, upload to the <strong>document root</strong> of your server. It has to be the document root, or else the whole thing will break.</summary>
-                    <div class="infobox">
-                        The document root could be called: <code>
-                        <ul>
-                            <li>/public_html</li>
-                            <li>/htdocs</li>
-                        </ul></code>
-                        or something else. Look for a folder in the root directory. Ask your web hosting company for more details.
-                    </div>
-								</details>
-                </li>
-                <li><details><summary>
-                    Go to the site you uploaded to.
-								</summary>
-                    <div class="infobox">
-                        You might not have a web server. You can use PHP's CLI SAPI web server:
-                        <ol>
-                            <li>Download PHP from <a href="https://php.net">https://php.net</a></li>
-                            <li>Copy files onto computer</li>
-                            <li>Open command window</li>
-                            <li>Run:
-                                <pre>C:\nodb-forum> php <span style="color:#333333;">-S</span> 0.0.0.0:8000 <span style="color:#333333;">-t</span> /path/to/your/files</pre>
-                                The web server is now running.<p>
-                                    however,
-                                    <div class="warningbox">
-                                        This is not actual web hosting, and should not be used on a network to provide services. Use it only for development!
-                                    </div>
-                                </p>
-                            </li>
-                        </ol>
-                    </div></details>
-                </li>
-                <li><details><summary>
-                    Type your forum name and install.</summary>
-                    <div class="infobox">
-                        Have your elePHPants so in case something goes wrong, it's easier to debug.
-                    </div></details>
-                </li>
-            </ol>
-					<h3 id="intro-functions">Functions: File System</h3>
-					<h4>File System Functions:</h4>
-					<p>The following filesystem functions are documented:</p>
-					<ul>
-					<li><details><summary>copyDir()</summary>
-						<p> Usage: 
-							<pre>
-copyDir(string $dir, string $dest, array $ignored = array(), int $t = 0, bool $header = true): ?string
-							</pre>
-This is the advanced version of <code>restore()</code>.
-<br>
-Unlike <code>restore()</code>:
-<br>
-<ul>
-<li>It stops and returns null whenever the copy PHP function fails.</li>
-<li>It logs the files copied and returns the log.</li>
-<li>It supports indentation</li>
-<li>You can specify files and directories to ignore.</li>
-	</ul>
-						<br>
-						The function returns a log, like this:
-						<br>
-						<pre>
-File copy
-   from SOURCE HERE
-   to DESTINATION HERE
- Started at 22:22 02/22/2022
- Copying 1 of 69
-     Copying 1 of 4
-         Copying 1 of 5
-         Copying 2 of 5
-         Copying 3 of 5
-         Copying 4 of 5
-         Copying 5 of 5
-     Copying 2 of 4
-         Copying 1 of 1
-     Copying 3 of 4
-     Copying 4 of 4
- Copying 2 of 69
- ...
-						</pre>
-						<br>
-Explanation of arguments:
-<br>
-<ol>
-<li><code>$dir</code>: Existing directory where you want to copy files from.</li>
-<li><code>$dest</code>: Destination directory</li>
-<li><code>$ignored</code>: Files and folders to not copy</li>
-<li><code>$t</code>: Initial indent size. We almost always recommend setting this to 0. This is meant for the indenting when copying sub-directories.</li>
-<li><code>$header</code>: Whether or not to include the initial message in the log.</li>
-</ol>
-						</p>
-               </details></li>
-						<li><details><summary>restore()</summary>
-                    <p>
-											Usage:
-											<pre>
- restore(string $bkdir, string $target): ?bool
-											</pre>
-							Restores the directory <code>$bkdir</code> into <code>$target</code>. Any existing files will be overwritten. However, it will not stop when an error occurs, e.g. permission is denied.
-										</p>
-               </details></li>
-					<li><details><summary>cleanFilename()</summary>
-                   <p>
-										 Usage:
-										 <pre>
-cleanFilename(string $name): string
-										 </pre>
-Cleans a filename to prevent directory traversal attacks.<br>
-The replaced characters are:
-<pre>
-space -> "_"
-?, /, \, *, |, <, >, " -> "-"
-</pre>
-Example:
-<pre>
-if (file_exists(__DIR__ . '/data/accounts/' . cleanFilename(getname()) . '/user.txt')) 
-echo "User " . htmlspecialchars(getname()) . ' exists'));
-</pre>
-									 </p>
-               </details></li>
-				<li><details><summary>logmsg()</summary>
-                    <p>
-											Usage:
-											<pre>
- logmsg(string $subject, string $details, ?string $user)
-											</pre>
-Logs the message and returns null.
-<br>
-The log is viewable at /logs.php.
-<br>
-The subject field currently has the following values:
-<ul>
-	<li>users</li>
-	<li>error</li>
-	<li>ban</li>
-	<li>setting</li>
-	<li>Topic created</li>
-</ul>
-										</p>
-               </details></li>
-						<li><details><summary>getDirSize()</summary>
-                  <p>
-										Usage:
-										<pre>
-getDirSize(string $directory): int|false
-										</pre>
-							Gets the size of a directory in bytes. Returns false on failure.
-									</p>
-               </details></li>
-					</ul>
-					<h3 id="intro-extrafunctions">Functions: </h3>
-            <h3 id="intro-usage">Usage and Licensing</h3>
-            You can use this software for:
-            <ul>
-                <li>tech support</li>
-                <li>issue discussion</li>
-                <li>or just regular chit chat!</li>
-            </ul><details><summary>
-           Licensing information:</summary>
-            <div class="infobox">
-                <p>nodb-forum Forum Software.
-                Copyright (C) 2021 nodb-forum contributors</p>
-                
-                <p>This program is free software: you can redistribute it and/or modify
-                it under the terms of the GNU Affero General Public License as
-                published by the Free Software Foundation, either version 3 of the
-                License, or (at your option) any later version.</p>
-                
-                <p>This program is distributed in the hope that it will be useful,
-                but WITHOUT ANY WARRANTY; without even the implied warranty of
-                MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-                GNU Affero General Public License for more details.</p>
-                
-                <p>You should have received a copy of the GNU Affero General Public License
-                along with this program. If not, see https://www.gnu.org/licenses/.</p>
-            </div></details>
-            <hr />
-            <a href="#contents">top</a>
-        </section>
-        </main>
-				    <div id="navigation"></div>
+let xhr = new XMLHttpRequest();
+
+xhr.open('GET', './docs/assets/header.html', true);
+
+xhr.send();
+
+// 4. This will be called after the response is received
+xhr.onload = function() {
+  if (xhr.status == 200) {
+    document.getElementById('navigation').innerHTML = xhr.responseText;
+  }
+};
+</script>
+<div id="navigation"></div>
+<h1>nodb-forum</h1>
+<h2>The forum software that doesn't need databases.</h2>
+<table>
+<tr>
+<th>The Others</th>
+<th>Us</th>
+</tr>
+<tr>
+<td>Setup: Many messy slides of database passwords</td>
+<td>Setup: Type name. Click install.</td>
+</tr>
+<tr>
+<td>Registration: Type e-mail, username, password. Solve messy SPAMBOT challenge.</td>
+<td>Registration: Type username, password, SPAMBOT challenge.</td>
+</tr>
+</table>

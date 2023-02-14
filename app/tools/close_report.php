@@ -13,7 +13,7 @@ if (!isset($_GET['post'])) {
 	if (count((array) $json->flags) == 0) unset($json->flags);
 	fwrite(fopen('config.json', 'w+'), json_encode($json));
 } else {
-	chdir(__DIR__ . '/../../data/messages/' . $_GET['room']);
+	chdir(__DIR__ . '/../data/messages/' . $_GET['room']);
 	$j = json_decode(file_get_contents('msg.json'));
 	unset($j->{$_GET['id']}->flags->{$_GET['user']});
 	fwrite(fopen('msg.json', 'w+'), json_encode($j));

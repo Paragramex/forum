@@ -8,7 +8,7 @@
 		}
 	?></title>
 	<?php
-	('./public/header.php');
+	include_once('./public/header.php');
 	include_once('./styles/inject.php');
 	?>
   </head>

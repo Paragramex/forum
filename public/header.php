@@ -7,12 +7,11 @@ register_shutdown_function(function() {
 ?>
 <link rel="icon" type="image/x-icon" href="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . '/img/logo.png'; ?>">
 <div id="keyboard-focus" style="z-index:999;">
-	<a id="link" href="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>#mainContent" style="background-color:black;"><Skip to main content</a>
+	<a id="link" href="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>#mainContent" style="background-color:black;">Skip to main content</a>
 </div>
   <div id="inbox-blanket" class="blanket">
-	<div class="overlay" id="inbox-overlay" style="display:none;position:fixed;top:50%;left:50%;transform: translate(-50%,-50%);border-radius: 25px;
-  border: 2px solid #73AD21;">
-		<table height="100%"><tr><td><p id="loading" style="color:black;">loading...</p><iframe src="about:blank" onload="document.getElementById('loading').style.display = 'none';" id="notification-iframe" frameBorder="0" style="height:595px;max-height:75vh;"></iframe></td></tr><tr><td><button onclick="this.parentNode.parentNode.parentNode.parentNode.parentNode.style.display = 'none';document.getElementById('loading').style.display = 'block';document.getElementById('notification-iframe').src = '';">Close</button></td></tr></table>
+	<div class="overlay" id="inbox-overlay" style="display:none;position:fixed;top:50%;left:50%;transform: translate(-50%,-50%); ">
+		<table height="100%"><tr><td><p id="loading" style="color:black;">loading...</p><iframe src="about:blank" onload="document.getElementById('loading').style.display = 'none';" id="notification-iframe" frameBorder="0" style="height:600px;max-height:75vh;"></iframe></td></tr><tr><td><button onclick="this.parentNode.parentNode.parentNode.parentNode.parentNode.style.display = 'none';document.getElementById('loading').style.display = 'block';document.getElementById('notification-iframe').src = '';">Close</button></td></tr></table>
 	</div>
   </div>
 <header> 
@@ -40,7 +39,7 @@ if (!getname()) {
 		}
 		return false;
 	}
-	if (determineIfUnread()) $unread = ' style="border-style: solid;padding:10px; background-clip: padding-box; background-color: #4a7a96; color: #ee8695; border-radius: 10px; text-decoration:none;border-color: #997577;" title="New  notifications.">See new ';
+	if (determineIfUnread()) $unread = ' style="border-style: solid;padding:10px; background-clip: padding-box; background-color: #4a7a96; color: #ee8695; border-radius: 10px; text-decoration:none;border-color: #997577;" title="New  notifications.">See new';
 	echo '<td><a style="padding:10px; background-clip: padding-box; background-color: #4a7a96; color: #ee8695; border-radius: 10px; text-decoration:none;" href="inbox.php" id="notification-button"' . $unread . 'notifications</a></td><td><a style="padding:10px; background-clip: padding-box; background-color: #4a7a96; color: #ee8695; border-radius: 10px; text-decoration:none;" href="account/">'.htmlspecialchars(getname()).'</a></td>';
 	echo '<td><a style="padding:10px; background-clip: padding-box; background-color: #4a7a96; color: #ee8695; border-radius: 10px; text-decoration:none;" href="account/logout.php">log out</a></td></tr>';
 }
@@ -76,7 +75,7 @@ else {
 	
 	<input type="hidden" name="tags" value="<?php echo htmlspecialchars(implode(" ", $tags)); ?>" /><?php
 }
-	?>&nbsp;<input style="outline:none;padding:0;border:none;" type="search" id="query" name="query" placeholder="search rooms" value="<?php if (isset($_GET['query'])) { echo htmlspecialchars($_GET['query']); } ?>" /> </span><input type="submit" value="↦"/></form></td><td></td></tr>
+	?>&nbsp;<input style="outline:none;padding:0;border:none;" type="search" id="query" name="query" placeholder="search rooms" value="<?php if (isset($_GET['query'])) { echo htmlspecialchars($_GET['query']); } ?>" /> </span><input type="submit" value=">" /></form></td><td></td></tr>
 </table>
 </header>
 <nav>

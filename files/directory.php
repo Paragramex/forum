@@ -13,7 +13,7 @@
 <h2>All Uploaded Files</h2>
 <p>This is a list of all the files that have been uploaded. These works are licensed under the <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>, so you can use them under <a href="http://creativecommons.org/licenses/by-sa/4.0/#deed-conditions" target="_blank">the terms</a>. <strong>Violation of the license will terminate your rights to these works!</strong></p>
 	  <p>Want to contribute your own work? <a class="fakebutton" href="files/">Upload files</a></p>
-<table class="table" >
+<table class="table">
 	<tr>
 		<td style="background-color:blue;text-align:center;" colspan="6">List of files</td>
 	</tr>

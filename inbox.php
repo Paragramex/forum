@@ -14,7 +14,7 @@
 			if (!file_exists(__DIR__ . '/data/accounts/' . cleanFilename(getname()) . '/inbox.json')) die("You have no inbox items.");
 			$a = json_decode(file_get_contents(__DIR__ . '/data/accounts/' . cleanFilename(getname()) . '/inbox.json'));
 			foreach (array_reverse($a->items) as &$i) {
-				?><li style="border:1px solid;<?php if (!$i->read) { ?> font-weight:bold;background-color:#6b72d4;<?php } ?>"><a href="<?php echo htmlspecialchars($i->url); ?>" style="text-decoration:none;" target="_blank"><?php echo friendlyDate($i->time); ?><h2><?php echo htmlspecialchars($i->type); ?></h2><?php echo htmlspecialchars($i->text); ?></a></li><?php
+				?><li style="border:1px solid;<?php if (!$i->read) { ?> font-weight:bold;background-color:#87CEEB;<?php } ?>"><a href="<?php echo htmlspecialchars($i->url); ?>" style="text-decoration:none;" target="_blank"><?php echo friendlyDate($i->time); ?><h2><?php echo htmlspecialchars($i->type); ?></h2><?php echo htmlspecialchars($i->text); ?></a></li><?php
 				$i->read = true;
 			}
 			if (count($a->items) === 0) {
