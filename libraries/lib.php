@@ -1,13 +1,13 @@
 <?php
 
 require 'updateOnlineTime.php';
-/*if (!class_exists('emptyClass')) {
+if (!class_exists('emptyClass')) {
 	class emptyClass {
 		function _copyright() {
 			return "";
 		}
 	}
-}*/
+}
 function endsWith(string $haystack, string $needle): bool {
     $length = strlen($needle);
     if(!$length) {

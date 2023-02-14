@@ -301,9 +301,10 @@ video {
 }
 .fakebutton {
 	padding: 7px;
-	text-transform: uppercase;
-	background-color: blue;
+	background-color: #6161cc;
 	color: white;
+	border: none;
+	border-radius: 12px;
 }
 .width-100 {
 	width: 100%;
@@ -355,6 +356,7 @@ ul.flex > li {
 .semantic {
 	list-style: none;
 	margin: 0;
+	box-sizing: border-box;
 }
 .border {
 	border: 1px solid;
@@ -423,4 +425,24 @@ td[colspan] {
 }
 img {
 	max-width: 100%;
+}
+.usermessagebox {
+  float: left;
+  width: 33%;
+  padding: 50px;
+}
+.userprofilebox {
+  float: left;
+  width: 33%;
+  padding: 50px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: #ffb7b7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffb7b7; /* Gecko Browsers */
 }

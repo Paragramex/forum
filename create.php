@@ -76,7 +76,7 @@
 			}
  		}
 	?>
-	<form id="form" action="<?php echo $_SERVER['PHP_SELF']; echo '" '; if(isset($_POST['roomtitle'])) { echo 'style="display:none;"'; }?> method="post">
+	<form id="form" action="<?php echo $_SERVER['PHP_SELF']; echo '" F'; if(isset($_POST['roomtitle'])) { echo 'style="display:none;"'; }?> method="post">
         <div style="border: 1px solid; color: red; background-color: pink; padding: 7px; border-radius: 7px;">
             <h3>Before posting</h3>
             <ul>

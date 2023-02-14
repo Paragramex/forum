@@ -4,7 +4,7 @@
   <head>
 	<?php
 	include_once('./public/header.php');
-	include_once('./styles/inject.php');
+	include('./styles/inject.php');
 	?>
     <title>Flag a Post</title>
   </head>

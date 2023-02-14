@@ -1,5 +1,5 @@
 <h2>Available Topics</h2>
-<details open="open">
+<details>
 	<summary>Upcoming Events</summary>
 	<ul style="list-style:none !important;padding:3px;"><li>
 		<ul style="list-style:none;padding:3px;">
@@ -114,7 +114,7 @@ Shuffle
 ?>
 <label>Page: <input type="hidden" name="sort" value="<?php echo isset($_GET['sort']) ? $_GET['sort'] : "active"; ?>" /><input type="number" min="1" max="<?php echo ceil($items / $size); ?>" value="<?php if (isset($_GET['page']) && ctype_digit($_GET['page'])) { echo htmlspecialchars($_GET['page']); } else { echo '1'; } ?>" name="page" /></label> 
 <input type="submit" value="Go!" /></form>
-<strong>Showing <em><?php echo $size; ?></em> entries on page <?php echo isset($_GET['page']) ? $_GET['page'] : 1; ?></strong><br />
+<strong>Showing <em><?php echo $size;?></em> entries on page <?php echo isset($_GET['page']) ? $_GET['page'] : 1; ?></strong><br />
 <?php
 if (!$sort || $sort == 'active')
 	$handle = scan_dir(__DIR__.'/../data/messages/', "msg.json");

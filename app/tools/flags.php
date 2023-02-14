@@ -10,6 +10,9 @@
 		chdir(__DIR__ . '/../../data/messages/');
 		$files = array_diff(scandir(".", SCANDIR_SORT_NONE), array('index.php', '.', '..'));
 		foreach ($files as $topic) {
+
+			if(!$topic == "readme.txt") {
+			
 			$config = json_decode(file_get_contents('./' . $topic . '/config.json'));
 			if (isset($config->flags)) {
 				array_push($stack, 'a');
@@ -27,6 +30,10 @@
 						?> (<a href="app/tools/close_report.php?room=<?php echo htmlspecialchars(urlencode($topic)); ?>&user=<?php echo htmlspecialchars(urlencode($author)); ?>">close</a>)</li><?php
 					}
 				?></ul></details></li><?php
+			}
+
+			} else {
+			echo "";
 			}
 		}
 		if (count($stack) == 0) { ?> <h3>This queue has been cleared!</h3><p>No review tasks currently. <a href=".">Go back to the home page?</a></p> <?php }
